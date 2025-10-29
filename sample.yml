@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  task:
+  - name: check space of filesystem
+    shell:
+     df -h
+  - name: check kernel version
+    shell:
+     uname -r
+     
